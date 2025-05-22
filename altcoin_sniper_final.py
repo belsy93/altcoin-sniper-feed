@@ -27,7 +27,7 @@ initial_capital = 1000
 available_capital = initial_capital
 profit_accumulated = 0
 
-def load_coin_picks(url='https://pastebin.com/raw/wU9xHWWv'):
+def load_coin_picks(url='https://raw.githubusercontent.com/belsy93/altcoin-sniper-feed/main/coin_picks.txt'):
     try:
         r = requests.get(url)
         return [line.strip().upper() for line in r.text.splitlines() if line.strip()] if r.ok else []
